@@ -10,4 +10,9 @@ public class PortfolioController {
 	public String portfolio() {
 		return "/portfolio";
 	}
+
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
 }
