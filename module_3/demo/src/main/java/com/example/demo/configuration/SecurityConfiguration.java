@@ -19,7 +19,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/support/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
-                .formLogin().loginPage("/login");
+                .formLogin().loginPage("/login")
+                .successHandler(new AuthenticationSuccessHandlerImpl());
     }
 
     @Override
